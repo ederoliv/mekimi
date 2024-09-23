@@ -12,6 +12,11 @@
     src: url("../assets/fonts/GeneralSans-Medium.ttf") format("truetype");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 body {
     box-sizing: border-box;
     font-family: "GeneralSans-Regular", sans-serif;
@@ -39,26 +44,16 @@ body {
   
   .sidebar__title {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: #f3f4f6;
     margin-bottom: 30px;
     /* color: #E85B6B; */
   }
-  
-  .sidebar__img {
-    display: flex;
 
-  }
-  
-  .sidebar__title > div > img {
-    width: 125px;
-    object-fit: contain;
-  }
-  
-  .sidebar__title > div > h1 {
-    font-size: 18px;
-    display: inline;
+  .mekimi-logo {
+    width: 50%;
   }
   
   .sidebar__menu > h2 {
@@ -93,7 +88,7 @@ body {
   }
   
   .sidebar__logout {
-    margin-top: 75vh;
+    margin-top: 20px;
     padding: 10px;
     color: #e65061;
   }
