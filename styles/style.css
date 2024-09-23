@@ -33,6 +33,14 @@ body {
     /* grid-gap: 0.2rem; */
   }
 
+.main__container {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #sidebar {
     background: #232323;
     grid-area: sidebar;
@@ -83,24 +91,6 @@ body {
   }
   
   .sidebar__link > i {
-    margin-right: 10px;
-    font-size: 18px;
-  }
-  
-  .sidebar__logout {
-    margin-top: 20px;
-    padding: 10px;
-    color: #e65061;
-  }
-  
-  .sidebar__logout > a {
-    text-decoration: none;
-    color: #e65061;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  
-  .sidebar__logout > i {
     margin-right: 10px;
     font-size: 18px;
   }
