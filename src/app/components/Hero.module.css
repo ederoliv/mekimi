@@ -16,6 +16,7 @@
   background-size: 32px 32px;
   opacity: 0.5;
   pointer-events: none;
+  z-index: 0;
 }
 .bgCircle1 {
   position: absolute;
@@ -24,6 +25,7 @@
   border-radius: 50%;
   background: radial-gradient(circle at center, rgba(var(--primary-rgb), 0.08) 0%, transparent 70%);
   pointer-events: none;
+  z-index: 0;
 }
 .bgCircle2 {
   position: absolute;
@@ -32,6 +34,7 @@
   border-radius: 50%;
   background: radial-gradient(circle at center, rgba(var(--primary-rgb), 0.05) 0%, transparent 70%);
   pointer-events: none;
+  z-index: 0;
 }
 
 /* Inner two-column */
@@ -42,6 +45,8 @@
   align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Copy */
