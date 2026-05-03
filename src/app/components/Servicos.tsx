@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import styles from './Servicos.module.css';
 
 const services = [
   {
@@ -112,28 +111,37 @@ export default function Servicos() {
   }, []);
 
   return (
-    <section id="servicos" className={`section ${styles.section}`} ref={sectionRef}>
-      <div className="container">
-        <div className={`section-header center reveal`}>
-          <div className="section-eyebrow"><span className="badge">Serviços</span></div>
-          <h2 className="section-title">
-            O que podemos fazer<br />por <span className="hl">você</span>
+    <section id="servicos" className="py-16 md:py-[100px] bg-white" ref={sectionRef}>
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="text-center mb-16 reveal">
+          <div className="mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-light text-primary text-[13px] font-semibold tracking-wide rounded-full border border-primary/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+              Serviços
+            </span>
+          </div>
+          <h2 className="text-[clamp(30px,4.5vw,52px)] font-extrabold leading-[1.1] tracking-tight text-black mb-4.5">
+            O que podemos fazer<br />por <span className="text-primary">você</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="text-[17px] text-gray-600 leading-[1.75] max-w-[520px] mx-auto">
             Do conceito ao deploy — cobrimos toda a jornada de desenvolvimento digital
             com qualidade e metodologia ágil.
           </p>
         </div>
 
-        <div className={`${styles.grid} stagger-children`}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 stagger-children">
           {services.map(s => (
-            <div key={s.title} className={`reveal ${styles.card}`}>
-              <div className={styles.cardIcon}>{s.icon}</div>
-              <h3 className={styles.cardTitle}>{s.title}</h3>
-              <p className={styles.cardDesc}>{s.desc}</p>
-              <div className={styles.tags}>
+            <div key={s.title} className="reveal group bg-white border border-gray-200 rounded-[22px] p-7 sm:p-8 flex flex-col gap-3.5 transition-all duration-300 hover:border-primary hover:shadow-[0_8px_28px_rgba(0,178,169,0.12)] hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-[14px] bg-primary-light text-primary flex items-center justify-center transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                {s.icon}
+              </div>
+              <h3 className="text-[16px] font-bold text-black leading-[1.3]">{s.title}</h3>
+              <p className="text-[14px] text-gray-600 leading-[1.65] flex-1">{s.desc}</p>
+              <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
                 {s.tags.map(t => (
-                  <span key={t} className={styles.tag}>{t}</span>
+                  <span key={t} className="px-2.5 py-1 bg-gray-100 text-gray-600 text-[12px] font-medium rounded-full transition-colors duration-150 group-hover:bg-primary-light group-hover:text-primary">
+                    {t}
+                  </span>
                 ))}
               </div>
             </div>
