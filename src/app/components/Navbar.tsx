@@ -48,11 +48,25 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1" aria-label="Navegação principal">
           {navLinks.map(l => {
+            const isContact = l.href === '#contato';
             const isActive = activeLink === l.href;
+            
+            if (isContact) {
+              return (
+                <button
+                  key={l.href}
+                  className="px-6 py-2.5 ml-2 bg-primary text-white border-none text-[14px] font-bold rounded-full cursor-pointer transition-all duration-300 hover:bg-primary-dark shadow-md hover:-translate-y-[1px] hover:shadow-[0_8px_20px_rgba(0,178,169,0.25)]"
+                  onClick={() => handleNav(l.href)}
+                >
+                  {l.label}
+                </button>
+              );
+            }
+
             return (
               <button
                 key={l.href}
-                className={`px-5 py-2.5 bg-transparent border-none text-[14px] font-bold rounded-full cursor-pointer transition-all duration-300 ${isActive ? 'bg-[#FF007F] text-white shadow-md' : 'text-[#2D3748] hover:text-[#FF007F] hover:bg-[#FF007F]/10'}`}
+                className={`px-5 py-2.5 bg-transparent border-none text-[14px] font-bold rounded-full cursor-pointer transition-all duration-300 ${isActive ? 'text-primary bg-primary-light/70' : 'text-[#2D3748] hover:text-primary hover:bg-primary-light/40'}`}
                 onClick={() => handleNav(l.href)}
               >
                 {l.label}
@@ -77,11 +91,25 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div className={`md:hidden absolute top-[110%] left-0 right-0 bg-white border border-gray-100 shadow-xl rounded-2xl p-4 flex-col gap-1 transition-all duration-300 ${menuOpen ? 'flex opacity-100 translate-y-0 pointer-events-auto' : 'flex opacity-0 -translate-y-2.5 pointer-events-none'}`}>
         {navLinks.map(l => {
+          const isContact = l.href === '#contato';
           const isActive = activeLink === l.href;
+          
+          if (isContact) {
+            return (
+              <button 
+                key={l.href} 
+                className="mt-2 px-4 py-3.5 bg-primary text-white border-none text-[15px] font-bold text-center cursor-pointer rounded-xl transition-colors duration-150 shadow-sm hover:bg-primary-dark hover:shadow-md" 
+                onClick={() => handleNav(l.href)}
+              >
+                {l.label}
+              </button>
+            );
+          }
+
           return (
             <button 
               key={l.href} 
-              className={`px-4 py-3 border-none text-[16px] font-bold text-left cursor-pointer rounded-xl transition-colors duration-150 ${isActive ? 'bg-[#FF007F] text-white shadow-sm' : 'bg-transparent text-[#2D3748] hover:bg-[#FF007F]/10 hover:text-[#FF007F]'}`} 
+              className={`px-4 py-3 border-none text-[16px] font-bold text-left cursor-pointer rounded-xl transition-colors duration-150 ${isActive ? 'bg-primary-light/70 text-primary' : 'bg-transparent text-[#2D3748] hover:bg-primary-light/40 hover:text-primary'}`} 
               onClick={() => handleNav(l.href)}
             >
               {l.label}
