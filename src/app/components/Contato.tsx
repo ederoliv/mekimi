@@ -19,7 +19,7 @@ const contactInfo = [
       </svg>
     ),
     label: 'Telefone',
-    value: '+55 (11) 99999-9999',
+    value: '+55 (54) 9 9172-6838',
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const contactInfo = [
       </svg>
     ),
     label: 'Localização',
-    value: 'São Paulo, SP — Brasil',
+    value: 'Caxias do Sul, RS — Brasil',
   },
 ];
 

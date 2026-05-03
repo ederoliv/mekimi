@@ -17,10 +17,6 @@ export default function Hero() {
       <div className="max-w-[1200px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 relative z-10 text-center lg:text-left">
         {/* Left — copy */}
         <div className="flex flex-col gap-6 items-center lg:items-start">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-light text-primary text-[13px] font-semibold tracking-wide rounded-full border border-primary/20 animate-fade-in-up">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-            Agência Digital
-          </span>
 
           <h1 className="text-[clamp(38px,5.5vw,68px)] font-black leading-[1.05] tracking-tight text-black animate-fade-in-up [animation-delay:100ms]">
             Transformamos<br />
