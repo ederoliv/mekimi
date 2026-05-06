@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Mekimi | Agência Digital — Sites, Apps e Sistemas sob medida',
+  title: 'Mekimi | Soluções Digitais',
   description:
     'A Mekimi transforma ideias em experiências digitais. Criamos sites institucionais, landing pages, hotsites, apps mobile, SaaS, software desktop e APIs com excelência.',
   keywords: [
@@ -22,8 +22,11 @@ export const metadata: Metadata = {
     'APIs',
     'mekimi',
   ],
+  icons: {
+    icon: '/logo.svg',
+  },
   openGraph: {
-    title: 'Mekimi | Agência Digital',
+    title: 'Mekimi | Soluções Digitais',
     description: 'Transformamos ideias em experiências digitais.',
     type: 'website',
     locale: 'pt_BR',
